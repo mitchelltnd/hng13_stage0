@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>HNG Stage 0 - Profile Card</title>
+	</head>
+	<body>
+		<article class="profile-card" data-testid="test-profile-card">
+			<figure class="profile-pic">
+				<img
+					data-testid="test-user-avatar"
+					src="ppf.jpg
+				"
+					alt="Profile Picture" />
+			</figure>
+			<h1 class="user-name" data-testid="test-user-name">Tonade Mitchell</h1>
+			<p class="user-bio" data-testid="test-user-bio">
+				A Computer Science Graduate, Currently serving in NYSC at Oyo State
+				Internal Revenue Service. A cyber security student at SQI College of
+				ICT.
+			</p>
+
+			<nav class="social-links">
+				<ul>
+					<li>
+						<a
+							href="https://api.whatsapp.com/send?phone=2348162021936&text=Hello%2C%20i%20got%20your%20number%20through%20your%20HNG%20stage%200%20project"
+							target="_blank"
+							data-testid="test-user-social-whatsapp"
+							>WhatsApp</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.tiktok.com/@mitchelltnd?_t=ZS-90dW9atkyxO&_r=1"
+							target="_blank"
+							data-testid="test-user-social-tiktok"
+							>Tiktok</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://github.com/mitchelltnd"
+							target="_blank"
+							data-testid="test-user-social-github"
+							>GitHub</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.instagram.com/_defnotmitchell_?igsh=MXFrcGcxczAyazlhaA%3D%3D&utm_source=qr"
+							target="_blank"
+							data-testid="test-user-social-instagram"
+							>Instagram</a
+						>
+					</li>
+				</ul>
+			</nav>
+			<div class="section-container">
+				<section class="hobbies" data-testid="test-user-hobbies">
+					<h2>Hobbies I Enjoy</h2>
+					<ul>
+						<li>Coding</li>
+						<li>Reading</li>
+						<li>Gaming</li>
+					</ul>
+				</section>
+				<section class="dislikes" data-testid="test-user-dislikes">
+					<h2>Things I Dislike</h2>
+					<ul>
+						<li>Procrastination</li>
+						<li>Dirty Environments</li>
+						<li>Dishonesty</li>
+					</ul>
+				</section>
+			</div>
+			<p id="displaytime">
+				Time in Milliseconds:
+				<span id="current-time" data-testid="test-user-time"></span>
+			</p>
+		</article>
+	</body>
+	<script>
+		// Display the current date and time
+		const displayTime = () => {
+			const outputelement = document.getElementById("current-time");
+			outputelement.innerHTML = Date.now();
+		};
+		displayTime();
+		setInterval(displayTime, 10);
+	</script>
+</html>
